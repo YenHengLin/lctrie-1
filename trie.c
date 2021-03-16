@@ -294,7 +294,7 @@ routtable_t buildrouttable(entry_t entry[], int nentries,
    nexthop = buildnexthoptable(entry, nentries, &nnexthops);
    clockoff();
    if (verbose)
-      fprintf(stderr, "\nBuilding nexthop table: %.2f\n", gettime());
+      fprintf(stderr, "\nBuilding nexthop table: %.6f s\n", gettime());
 
    clockon();
    quicksort((char *) entry, nentries, sizeof(entry_t), pstrcmp);
@@ -305,9 +305,9 @@ routtable_t buildrouttable(entry_t entry[], int nentries,
          entry[size++] = entry[i];
    clockoff();
    if (verbose) {
-      fprintf(stderr, "Sorting: %.2f", gettime());
+      fprintf(stderr, "Sorting: %.6f s", gettime());
       if (size != nentries)
-         fprintf(stderr, "  (%i unique entries)", size);
+         fprintf(stderr, "  (Router table have i unique entries)", size);
       fprintf(stderr, "\n");
    }
 
@@ -384,7 +384,7 @@ routtable_t buildrouttable(entry_t entry[], int nentries,
    table->nexthopsize = nnexthops;
    clockoff();
    if (verbose)
-      fprintf(stderr, "Building routing table: %.2f\n", gettime());
+      fprintf(stderr, "Building routing table: %.6f s\n", gettime());
 
    return table;
 }

@@ -61,17 +61,20 @@ static int readentries(char *file_name,
    int len;
    FILE *in_file;
 
-   if (!(in_file = fopen(file_name, "rb"))) {
+   if (!(in_file = fopen(file_name, "rb")))
+   {
       perror(file_name);
       exit(-1);
    }
 
-   while (fscanf(in_file, "%lu%i%lu", &data, &len, &nexthop) != EOF) {
-      if (nentries >= maxsize) return -1;
-      entry[nentries] = (entry_t) malloc(sizeof(struct entryrec));
+   while (fscanf(in_file, "%lu%i%lu", &data, &len, &nexthop) != EOF)
+   {
+      if (nentries >= maxsize)
+         return -1;
+      entry[nentries] = (entry_t)malloc(sizeof(struct entryrec));
       /* clear the 32-len last bits, this shouldn't be necessary
          if the routtable data was consistent */
-      data = data >> (32-len) << (32-len);
+      data = data >> (32 - len) << (32 - len);
       entry[nentries]->data = data;
       entry[nentries]->len = len;
       entry[nentries]->nexthop = nexthop;
@@ -91,13 +94,16 @@ static int readtraffic(char *file_name,
    word s;
    FILE *in_file;
 
-   if (!(in_file = fopen(file_name, "rb"))) {
+   if (!(in_file = fopen(file_name, "rb")))
+   {
       perror(file_name);
       exit(-1);
    }
 
-   while (fscanf(in_file, "%lu", &s) != EOF && nstrings < maxsize) {
-      if (nstrings >= maxsize) return -1;
+   while (fscanf(in_file, "%lu", &s) != EOF && nstrings < maxsize)
+   {
+      if (nstrings >= maxsize)
+         return -1;
       str[nstrings] = s;
       nstrings++;
    }
@@ -113,11 +119,14 @@ void writeentries(entry_t t[], int nentries, int n)
       nentries = n;
    printf("\nEntries (nexthop, entry):\n");
 
-   for (i = 0;  i < nentries; i++) {
+   for (i = 0; i < nentries; i++)
+   {
       printf("%5lu   ", t[i]->nexthop);
-      for (j = 0; j < t[i]->len; j++) {
-         printf("%1d", t[i]->data<<j>>31);
-         if (j%8 == 7) printf(" ");
+      for (j = 0; j < t[i]->len; j++)
+      {
+         printf("%1d", t[i]->data << j >> 31);
+         if (j % 8 == 7)
+            printf(" ");
       }
       printf("\n");
    }
@@ -131,8 +140,8 @@ void writeentries(entry_t t[], int nentries, int n)
 void run(word testdata[], int entries, int repeat,
          routtable_t table, int useInline, int n, int verbose)
 {
-   double time[100];  /* Repeat the experiment at most 100 times */
-   double min, x_sum, x2_sum, aver, stdev;
+   double time[100]; /* Repeat the experiment at most 100 times */
+   double min, max, x_sum, x2_sum, aver, stdev;
    int i, j, k;
 
    volatile word res; /* The result of a search is stored in a */
@@ -148,8 +157,10 @@ void run(word testdata[], int entries, int repeat,
    /* Used to record search pattern */
    /* static int searchDist[MAXENTRIES]; */
 
-   if (!useInline) {
-      for (i = 0; i < n; ++i) {
+   if (!useInline)
+   {
+      for (i = 0; i < n; ++i)
+      {
          clockon();
          for (j = 0; j < repeat; ++j)
             for (k = 0; k < entries; k++)
@@ -157,18 +168,23 @@ void run(word testdata[], int entries, int repeat,
          clockoff();
          time[i] = gettime();
       }
-   } else {
-      for (i = 0; i < n; ++i) {
+   }
+   else
+   {
+      for (i = 0; i < n; ++i)
+      {
          clockon();
          for (j = 0; j < repeat; ++j)
-            for (k = 0; k < entries; k++) {
+            for (k = 0; k < entries; k++)
+            {
                /********** Inline search **********/
                s = testdata[k];
                node = table->trie[0];
                pos = GETSKIP(node);
                branch = GETBRANCH(node);
                adr = GETADR(node);
-               while (branch != 0) {
+               while (branch != 0)
+               {
                   node = table->trie[adr + EXTRACT(pos, branch, s)];
                   pos += branch + GETSKIP(node);
                   branch = GETBRANCH(node);
@@ -177,21 +193,24 @@ void run(word testdata[], int entries, int repeat,
                /* searchDist[adr]++; */
                /* was this a hit? */
                bitmask = table->base[adr].str ^ s;
-               if (EXTRACT(0, table->base[adr].len, bitmask) == 0) {
+               if (EXTRACT(0, table->base[adr].len, bitmask) == 0)
+               {
                   res = table->nexthop[table->base[adr].nexthop];
                   goto end;
                }
                /* if not look in the prefix tree */
                preadr = table->base[adr].pre;
-               while (preadr != NOPRE) {
-                  if (EXTRACT(0, table->pre[preadr].len, bitmask) == 0) {
+               while (preadr != NOPRE)
+               {
+                  if (EXTRACT(0, table->pre[preadr].len, bitmask) == 0)
+                  {
                      res = table->nexthop[table->pre[preadr].nexthop];
                      goto end;
                   }
                   preadr = table->pre[preadr].pre;
-               }	
+               }
                res = 0; /* not found */
-               end:
+            end:;
                /********* End inline search ********/
             }
          clockoff();
@@ -201,28 +220,39 @@ void run(word testdata[], int entries, int repeat,
 
    x_sum = x2_sum = 0;
    min = DBL_MAX;
-   for (i = 0; i < n; ++i) {
+   max = 0;
+   for (i = 0; i < n; ++i)
+   {
       x_sum += time[i];
-      x2_sum += time[i]*time[i];
+      x2_sum += time[i] * time[i];
       min = time[i] < min ? time[i] : min;
+      max = time[i] > max ? time[i] : max;
    }
-   if (n > 1) {
-      aver = x_sum / (double) n;
-      stdev = sqrt (fabs(x2_sum - n*aver*aver) / (double) (n - 1));
-      fprintf(stderr, "  min:%5.2f", min);
-      fprintf(stderr, "  aver:%5.2f", aver);
-      fprintf(stderr, "  stdev:%5.2f", stdev);
+   if (n > 1)
+   {
+      aver = x_sum / (double)n;
+      stdev = sqrt(fabs(x2_sum - n * aver * aver) / (double)(n - 1));
+      fprintf(stderr, "  min:%5.6f s", min);
+      fprintf(stderr, "  max:%5.6f s", max);
+      fprintf(stderr, "  aver:%5.6f s", aver);
+      fprintf(stderr, "  stdev:%5.6f s", stdev);
    }
-   if (verbose) {
+   if (verbose)
+   {
       fprintf(stderr, "  (");
-      for (i = 0; i < n-1; ++i)
-         fprintf(stderr, "%.2f,", time[i]);
-      fprintf(stderr, "%.2f)", time[i]);
+      for (i = 0; i < n - 1; ++i)
+         fprintf(stderr, "%.6f,", time[i]);
+      fprintf(stderr, "%.6f)", time[i]);
    }
    fprintf(stderr, "\n");
-   fprintf(stderr, "  %.0f lookups/sec", repeat*entries/min);
+   fprintf(stderr, "min:  %.6f lookups/sec", repeat * entries / min);
    if (verbose)
-      fprintf(stderr, " (%.2f sec, %i lookups)", min, repeat*entries);
+      fprintf(stderr, " (%.6f sec, %i lookups)", min, repeat * entries);
+   fprintf(stderr, "\n");
+
+   fprintf(stderr, "max:  %.6f lookups/sec", repeat * entries / max);
+   if (verbose)
+      fprintf(stderr, " (%.6f sec, %i lookups)", max, repeat * entries);
    fprintf(stderr, "\n");
 
    /* Print information about the search distribution */
@@ -238,46 +268,56 @@ void run(word testdata[], int entries, int repeat,
 
 int main(int argc, char *argv[])
 {
-   #define MAXENTRIES 50000            /* An array of table entries */
+#define MAXENTRIES 1000000 /* An array of table entries */
    static entry_t entry[MAXENTRIES];
    int nentries;
 
-   #define MAXTRAFFIC 1000000          /* Traffic */
+#define MAXTRAFFIC 1000000 /* Traffic */
    static word traffic[MAXTRAFFIC];
    int ntraffic;
 
    routtable_t table; /* The routing table */
 
-   word *testdata;    /* The test data comes from either a traffic */
-                      /* file, or it is generated from the rout table */
+   word *testdata; /* The test data comes from either a traffic */
+                   /* file, or it is generated from the rout table */
 
-   int repeat;        /* Number of times to repeat the experiment */
-   boolean traffsub;  /* did the user submit a traffic file? */
+   int repeat;       /* Number of times to repeat the experiment */
+   boolean traffsub; /* did the user submit a traffic file? */
    int verbose = TRUE;
 
-   int i, j;          /* Auxiliary variables */
+   int i, j; /* Auxiliary variables */
    word temp;
 
-   if (argc < 2 || argc > 4) {
+   if (argc < 2 || argc > 4)
+   {
       fprintf(stderr, "%s%s%s\n", "Usage: ", argv[0],
               " routing_file [traffic_file] [n]");
       return 1;
-   } else if (argc == 4) {
+   }
+   else if (argc == 4)
+   {
       repeat = atoi(argv[3]);
       traffsub = TRUE;
-   } else if (argc == 3)
-      if (isdigit(*(argv[2]))) {
+   }
+   else if (argc == 3)
+      if (isdigit(*(argv[2])))
+      {
          traffsub = FALSE;
          repeat = atoi(argv[2]);
-      } else {
-         traffsub = TRUE; 
+      }
+      else
+      {
+         traffsub = TRUE;
          repeat = 1;
-   } else if (argc == 2) {
+      }
+   else if (argc == 2)
+   {
       traffsub = FALSE;
       repeat = 1;
    }
 
-   if ((nentries = readentries(argv[1], entry, MAXENTRIES)) < 0) {
+   if ((nentries = readentries(argv[1], entry, MAXENTRIES)) < 0)
+   {
       fprintf(stderr, "Input file too large.\n");
       return 1;
    }
@@ -287,27 +327,46 @@ int main(int argc, char *argv[])
 
    /* writeentries(entry, nentries, 100000); printf("\n"); */
 
-   if (traffsub) {
+   if (traffsub)
+   {
       ntraffic = readtraffic(argv[2], traffic, MAXTRAFFIC);
       fprintf(stderr, "%s%s", "Traffic file: ", argv[2]);
       fprintf(stderr, "  (%0d lines)\n", ntraffic);
-      if (ntraffic < 0) {
+      if (ntraffic < 0)
+      {
          fprintf(stderr, "%s\n", "Traffic file too large.");
          return -1;
       }
       testdata = traffic;
-   } else { /* use data from routing table as traffic */
-      testdata = (word *) malloc(nentries*sizeof(word));
-      for (i = 0; i < nentries; i++)
-         testdata[i] = entry[i]->data;
-      /* permute the entries */
-      for (i = 0; i < nentries - 1; i++) {
-         j = i + (int) (good_drand()*(nentries - i - 1));
-         temp = testdata[i];
-         testdata[i] = testdata[j];
-         testdata[j] = temp;
+   }
+   else
+   {
+      if (nentries < repeat)
+      {
+         testdata = (word *)malloc(repeat * sizeof(word));
+         for (i = 0; i < repeat; i++)
+         {
+            temp = rand() % nentries;
+            testdata[i] = entry[temp]->data;
+         }
+         ntraffic = repeat;
       }
-      ntraffic = nentries;
+      else
+      {
+         /* use data from routing table as traffic */
+         testdata = (word *)malloc(nentries * sizeof(word));
+         for (i = 0; i < nentries; i++)
+            testdata[i] = entry[i]->data;
+         /* permute the entries */
+         for (i = 0; i < nentries - 1; i++)
+         {
+            j = i + (int)(good_drand() * (nentries - i - 1));
+            temp = testdata[i];
+            testdata[i] = testdata[j];
+            testdata[j] = temp;
+         }
+         ntraffic = nentries;
+      }
    }
    if (repeat > 1)
       fprintf(stderr, "%s%0d\n", "Repeated: ", repeat);
@@ -315,12 +374,19 @@ int main(int argc, char *argv[])
    table = buildrouttable(entry, nentries, 0.50, 16, verbose);
    /* writerouttable(table); */
    routtablestat(table, verbose);
-
-   fprintf(stderr, "Function search\n");
-   run(testdata, ntraffic, repeat, table, FALSE, 8, verbose);
-   fprintf(stderr, "Inline search\n");
-   run(testdata, ntraffic, repeat, table, TRUE, 8, verbose);
-   disposerouttable(table);
+   if(argc == 3){
+      fprintf(stderr, "Function search\n");
+      run(testdata, ntraffic, 1, table, FALSE, 8, verbose);
+      disposerouttable(table);
+   }
+   else{
+      fprintf(stderr, "Function search\n");
+      run(testdata, ntraffic, repeat, table, FALSE, 8, verbose);
+      fprintf(stderr, "Inline search\n");
+      run(testdata, ntraffic, repeat, table, TRUE, 8, verbose);
+      disposerouttable(table);
+   }
+   
    /*
    for (i = 1; i <= 20; i++) {
       disposerouttable(table);

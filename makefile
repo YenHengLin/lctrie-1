@@ -33,7 +33,13 @@ OBJECTS = ${SRCS:%.c=%.o}
 # The first target, the name of our program:
 ${PROGRAM}: $(OBJECTS)
 	$(LINK.c) -o $@ $(OBJECTS) $(LDLIBS)
+run : $(PROGRAM)
+	for i in {1..32}; \
+	do \
+		./$^ ../s_router/prefix$$i.rout 1000000 >> keep.txt 2>&1; \
+	done \
 
 # To remove generated object files:
 clean:
 	-rm -f ${OBJECTS}
+	-rm -f keep.txt

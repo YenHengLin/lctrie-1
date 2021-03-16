@@ -1,0 +1,846 @@
+Table file: ../s_router/prefix1.rout  (1 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  1*4 bytes
+  1 leaves, 0 internal nodes
+  max path: 0  aver path: 0.000000
+Base vector
+  1*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1*4 bytes
+
+Function search
+  min:0.004000 s  max:0.005000 s  aver:0.004125 s  stdev:0.000354 s  (0.004000,0.004000,0.004000,0.005000,0.004000,0.004000,0.004000,0.004000)
+min:  250000000.000000 lookups/sec (0.004000 sec, 1000000 lookups)
+max:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+Table file: ../s_router/prefix2.rout  (2 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  3*4 bytes
+  2 leaves, 1 internal nodes
+   1      2
+  max path: 1  aver path: 1.000000
+Base vector
+  2*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  2*4 bytes
+
+Function search
+  min:0.005000 s  max:0.006000 s  aver:0.005625 s  stdev:0.000518 s  (0.006000,0.005000,0.006000,0.006000,0.005000,0.006000,0.005000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix3.rout  (4 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.001000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  4*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  4*4 bytes
+
+Function search
+  min:0.005000 s  max:0.006000 s  aver:0.005625 s  stdev:0.000518 s  (0.006000,0.005000,0.006000,0.005000,0.006000,0.006000,0.005000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix4.rout  (8 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  8*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  8*4 bytes
+
+Function search
+  min:0.005000 s  max:0.006000 s  aver:0.005625 s  stdev:0.000518 s  (0.006000,0.005000,0.006000,0.006000,0.005000,0.006000,0.005000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix5.rout  (16 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.001000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  16*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  16*4 bytes
+
+Function search
+  min:0.005000 s  max:0.006000 s  aver:0.005875 s  stdev:0.000354 s  (0.006000,0.006000,0.005000,0.006000,0.006000,0.006000,0.006000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix6.rout  (32 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  32*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  32*4 bytes
+
+Function search
+  min:0.005000 s  max:0.007000 s  aver:0.006000 s  stdev:0.000535 s  (0.006000,0.006000,0.005000,0.006000,0.007000,0.006000,0.006000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+Table file: ../s_router/prefix7.rout  (64 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.001000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  64*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  64*4 bytes
+
+Function search
+  min:0.005000 s  max:0.007000 s  aver:0.006125 s  stdev:0.000641 s  (0.006000,0.007000,0.006000,0.005000,0.006000,0.007000,0.006000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+Table file: ../s_router/prefix8.rout  (128 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  128*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  128*4 bytes
+
+Function search
+  min:0.006000 s  max:0.006000 s  aver:0.006000 s  stdev:0.000000 s  (0.006000,0.006000,0.006000,0.006000,0.006000,0.006000,0.006000,0.006000)
+min:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix9.rout  (256 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  256*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  256*4 bytes
+
+Function search
+  min:0.005000 s  max:0.007000 s  aver:0.006000 s  stdev:0.000756 s  (0.005000,0.007000,0.006000,0.005000,0.006000,0.007000,0.006000,0.006000)
+min:  200000000.000000 lookups/sec (0.005000 sec, 1000000 lookups)
+max:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+Table file: ../s_router/prefix10.rout  (512 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  512*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  512*4 bytes
+
+Function search
+  min:0.006000 s  max:0.006000 s  aver:0.006000 s  stdev:0.000000 s  (0.006000,0.006000,0.006000,0.006000,0.006000,0.006000,0.006000,0.006000)
+min:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+max:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+Table file: ../s_router/prefix11.rout  (1024 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  1024*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1024*4 bytes
+
+Function search
+  min:0.006000 s  max:0.007000 s  aver:0.006250 s  stdev:0.000463 s  (0.006000,0.006000,0.006000,0.007000,0.006000,0.006000,0.006000,0.007000)
+min:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+max:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+Table file: ../s_router/prefix12.rout  (2048 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.001000 s
+Building routing table: 0.000000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  2048*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  2048*4 bytes
+
+Function search
+  min:0.006000 s  max:0.007000 s  aver:0.006625 s  stdev:0.000518 s  (0.006000,0.007000,0.007000,0.006000,0.007000,0.007000,0.006000,0.007000)
+min:  166666666.666667 lookups/sec (0.006000 sec, 1000000 lookups)
+max:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+Table file: ../s_router/prefix13.rout  (4096 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.001000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  4096*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  4096*4 bytes
+
+Function search
+  min:0.007000 s  max:0.008000 s  aver:0.007250 s  stdev:0.000463 s  (0.008000,0.007000,0.007000,0.007000,0.007000,0.007000,0.008000,0.007000)
+min:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+max:  125000000.000000 lookups/sec (0.008000 sec, 1000000 lookups)
+Table file: ../s_router/prefix14.rout  (8192 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.000000 s
+Sorting: 0.000000 s
+Building routing table: 0.002000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  8192*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  8192*4 bytes
+
+Function search
+  min:0.007000 s  max:0.008000 s  aver:0.007750 s  stdev:0.000463 s  (0.007000,0.008000,0.008000,0.008000,0.008000,0.007000,0.008000,0.008000)
+min:  142857142.857143 lookups/sec (0.007000 sec, 1000000 lookups)
+max:  125000000.000000 lookups/sec (0.008000 sec, 1000000 lookups)
+Table file: ../s_router/prefix15.rout  (16384 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.001000 s
+Sorting: 0.001000 s
+Building routing table: 0.003000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  16384*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  16384*4 bytes
+
+Function search
+  min:0.009000 s  max:0.010000 s  aver:0.009750 s  stdev:0.000463 s  (0.009000,0.010000,0.010000,0.009000,0.010000,0.010000,0.010000,0.010000)
+min:  111111111.111111 lookups/sec (0.009000 sec, 1000000 lookups)
+max:  100000000.000000 lookups/sec (0.010000 sec, 1000000 lookups)
+Table file: ../s_router/prefix16.rout  (32768 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.002000 s
+Sorting: 0.002000 s
+Building routing table: 0.007000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  32768*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  32768*4 bytes
+
+Function search
+  min:0.012000 s  max:0.013000 s  aver:0.012125 s  stdev:0.000354 s  (0.012000,0.012000,0.012000,0.012000,0.012000,0.013000,0.012000,0.012000)
+min:  83333333.333333 lookups/sec (0.012000 sec, 1000000 lookups)
+max:  76923076.923077 lookups/sec (0.013000 sec, 1000000 lookups)
+Table file: ../s_router/prefix17.rout  (65536 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.005000 s
+Sorting: 0.004000 s
+Building routing table: 0.013000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  65537*4 bytes
+  65536 leaves, 1 internal nodes
+   1  65536
+  max path: 1  aver path: 1.000000
+Base vector
+  65536*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  65536*4 bytes
+
+Function search
+  min:0.010000 s  max:0.011000 s  aver:0.010750 s  stdev:0.000463 s  (0.011000,0.010000,0.011000,0.011000,0.011000,0.011000,0.010000,0.011000)
+min:  100000000.000000 lookups/sec (0.010000 sec, 1000000 lookups)
+max:  90909090.909091 lookups/sec (0.011000 sec, 1000000 lookups)
+Table file: ../s_router/prefix18.rout  (131072 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.009000 s
+Sorting: 0.010000 s
+Building routing table: 0.026000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  196609*4 bytes
+  131072 leaves, 65537 internal nodes
+   1      0
+   2 131072
+  max path: 2  aver path: 2.000000
+Base vector
+  131072*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  131072*4 bytes
+
+Function search
+  min:0.015000 s  max:0.016000 s  aver:0.015750 s  stdev:0.000463 s  (0.016000,0.016000,0.016000,0.015000,0.016000,0.016000,0.016000,0.015000)
+min:  66666666.666667 lookups/sec (0.015000 sec, 1000000 lookups)
+max:  62500000.000000 lookups/sec (0.016000 sec, 1000000 lookups)
+Table file: ../s_router/prefix19.rout  (262144 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.018000 s
+Sorting: 0.021000 s
+Building routing table: 0.056000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  589825*4 bytes
+  524288 leaves, 65537 internal nodes
+   1      0
+   2 524288
+  max path: 2  aver path: 2.000000
+Base vector
+  262144*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  262144*4 bytes
+
+Function search
+  min:0.016000 s  max:0.017000 s  aver:0.016625 s  stdev:0.000518 s  (0.017000,0.016000,0.016000,0.017000,0.017000,0.017000,0.016000,0.017000)
+min:  62500000.000000 lookups/sec (0.016000 sec, 1000000 lookups)
+max:  58823529.411765 lookups/sec (0.017000 sec, 1000000 lookups)
+Table file: ../s_router/prefix20.rout  (524288 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.039000 s
+Sorting: 0.044000 s
+Building routing table: 0.114000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  1114113*4 bytes
+  1048576 leaves, 65537 internal nodes
+   1      0
+   2 1048576
+  max path: 2  aver path: 2.000000
+Base vector
+  524288*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  524288*4 bytes
+
+Function search
+  min:0.016000 s  max:0.017000 s  aver:0.016625 s  stdev:0.000518 s  (0.017000,0.017000,0.016000,0.017000,0.016000,0.017000,0.017000,0.016000)
+min:  62500000.000000 lookups/sec (0.016000 sec, 1000000 lookups)
+max:  58823529.411765 lookups/sec (0.017000 sec, 1000000 lookups)
+Table file: ../s_router/prefix21.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.087000 s
+Sorting: 0.085000 s
+Building routing table: 0.216000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.090000 s  max:0.096000 s  aver:0.093000 s  stdev:0.001690 s  (0.092000,0.093000,0.090000,0.093000,0.093000,0.093000,0.096000,0.094000)
+min:  11111111.111111 lookups/sec (0.090000 sec, 1000000 lookups)
+max:  10416666.666667 lookups/sec (0.096000 sec, 1000000 lookups)
+Table file: ../s_router/prefix22.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.062000 s
+Sorting: 0.065000 s
+Building routing table: 0.160000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.080000 s  max:0.084000 s  aver:0.081125 s  stdev:0.001356 s  (0.080000,0.081000,0.081000,0.080000,0.081000,0.080000,0.084000,0.082000)
+min:  12500000.000000 lookups/sec (0.080000 sec, 1000000 lookups)
+max:  11904761.904762 lookups/sec (0.084000 sec, 1000000 lookups)
+Table file: ../s_router/prefix23.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.059000 s
+Sorting: 0.056000 s
+Building routing table: 0.142000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.074000 s  max:0.082000 s  aver:0.078250 s  stdev:0.003284 s  (0.076000,0.082000,0.076000,0.074000,0.076000,0.082000,0.082000,0.078000)
+min:  13513513.513514 lookups/sec (0.074000 sec, 1000000 lookups)
+max:  12195121.951220 lookups/sec (0.082000 sec, 1000000 lookups)
+Table file: ../s_router/prefix24.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.062000 s
+Sorting: 0.059000 s
+Building routing table: 0.172000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.085000 s  max:0.100000 s  aver:0.091375 s  stdev:0.005397 s  (0.098000,0.100000,0.094000,0.087000,0.090000,0.088000,0.085000,0.089000)
+min:  11764705.882353 lookups/sec (0.085000 sec, 1000000 lookups)
+max:  10000000.000000 lookups/sec (0.100000 sec, 1000000 lookups)
+Table file: ../s_router/prefix25.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.056000 s
+Sorting: 0.065000 s
+Building routing table: 0.148000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.079000 s  max:0.101000 s  aver:0.088625 s  stdev:0.008193 s  (0.091000,0.081000,0.087000,0.100000,0.101000,0.086000,0.084000,0.079000)
+min:  12658227.848101 lookups/sec (0.079000 sec, 1000000 lookups)
+max:  9900990.099010 lookups/sec (0.101000 sec, 1000000 lookups)
+Table file: ../s_router/prefix26.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.054000 s
+Sorting: 0.061000 s
+Building routing table: 0.158000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.073000 s  max:0.089000 s  aver:0.077500 s  stdev:0.004870 s  (0.089000,0.075000,0.076000,0.076000,0.073000,0.076000,0.078000,0.077000)
+min:  13698630.136986 lookups/sec (0.073000 sec, 1000000 lookups)
+max:  11235955.056180 lookups/sec (0.089000 sec, 1000000 lookups)
+Table file: ../s_router/prefix27.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.051000 s
+Sorting: 0.062000 s
+Building routing table: 0.146000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.076000 s  max:0.084000 s  aver:0.079375 s  stdev:0.002825 s  (0.082000,0.084000,0.081000,0.077000,0.080000,0.078000,0.077000,0.076000)
+min:  13157894.736842 lookups/sec (0.076000 sec, 1000000 lookups)
+max:  11904761.904762 lookups/sec (0.084000 sec, 1000000 lookups)
+Table file: ../s_router/prefix28.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.064000 s
+Sorting: 0.075000 s
+Building routing table: 0.150000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.075000 s  max:0.088000 s  aver:0.080375 s  stdev:0.004926 s  (0.088000,0.081000,0.082000,0.086000,0.075000,0.076000,0.080000,0.075000)
+min:  13333333.333333 lookups/sec (0.075000 sec, 1000000 lookups)
+max:  11363636.363636 lookups/sec (0.088000 sec, 1000000 lookups)
+Table file: ../s_router/prefix29.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.048000 s
+Sorting: 0.055000 s
+Building routing table: 0.143000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.074000 s  max:0.078000 s  aver:0.076250 s  stdev:0.001488 s  (0.078000,0.074000,0.075000,0.075000,0.078000,0.077000,0.077000,0.076000)
+min:  13513513.513514 lookups/sec (0.074000 sec, 1000000 lookups)
+max:  12820512.820513 lookups/sec (0.078000 sec, 1000000 lookups)
+Table file: ../s_router/prefix30.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.049000 s
+Sorting: 0.054000 s
+Building routing table: 0.139000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.074000 s  max:0.076000 s  aver:0.074875 s  stdev:0.000991 s  (0.074000,0.075000,0.076000,0.074000,0.074000,0.076000,0.076000,0.074000)
+min:  13513513.513514 lookups/sec (0.074000 sec, 1000000 lookups)
+max:  13157894.736842 lookups/sec (0.076000 sec, 1000000 lookups)
+Table file: ../s_router/prefix31.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.054000 s
+Sorting: 0.054000 s
+Building routing table: 0.139000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  2065537*4 bytes
+  2003036 leaves, 62501 internal nodes
+   1   3036
+   2 2000000
+  max path: 2  aver path: 1.998484
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.074000 s  max:0.075000 s  aver:0.074125 s  stdev:0.000354 s  (0.074000,0.074000,0.074000,0.074000,0.074000,0.074000,0.075000,0.074000)
+min:  13513513.513514 lookups/sec (0.074000 sec, 1000000 lookups)
+max:  13333333.333333 lookups/sec (0.075000 sec, 1000000 lookups)
+Table file: ../s_router/prefix32.rout  (1000000 lines)
+Repeated: 1000000
+
+Building nexthop table: 0.048000 s
+Sorting: 0.055000 s
+Building routing table: 0.133000 s
+
+Trie
+  Fill factor: 0.50
+  Branch at root: 16 (fixed)
+  1065537*4 bytes
+  1003036 leaves, 62501 internal nodes
+   1   3036
+   2 1000000
+  max path: 2  aver path: 1.996973
+Base vector
+  1000000*16 bytes
+Prefix vector
+  0*12 bytes
+  max path: 0  average path: -1.#IND00
+Nexthop vector
+  1000000*4 bytes
+
+Function search
+  min:0.072000 s  max:0.076000 s  aver:0.073500 s  stdev:0.001309 s  (0.076000,0.073000,0.075000,0.073000,0.073000,0.072000,0.073000,0.073000)
+min:  13888888.888889 lookups/sec (0.072000 sec, 1000000 lookups)
+max:  13157894.736842 lookups/sec (0.076000 sec, 1000000 lookups)
