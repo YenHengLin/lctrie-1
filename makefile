@@ -39,6 +39,13 @@ run : $(PROGRAM)
 		./$^ ../s_router/prefix$$i.rout 1000000 >> keep.txt 2>&1; \
 	done \
 
+runseq : $(PROGRAM)
+	./$^ ../TrieforIP/s_router/prefix20.rout 1000000 >> prefix20.txt 2>&1
+
+runreal : $(PROGRAM)
+	./$^ ../TrieforIP/realdata/AS65000pro_1_7.txt 1000000 >> AS65000pro_1_7.txt 2>&1
+	./$^ ../TrieforIP/realdata/AS65000pro_2_1.txt 1000000 >> AS65000pro_2_1.txt 2>&1
+
 # To remove generated object files:
 clean:
 	-rm -f ${OBJECTS}
